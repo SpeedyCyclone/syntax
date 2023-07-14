@@ -1,0 +1,41 @@
+.ul {
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  text-decoration: none;
+  list-style: none;
+  margin-top: 30px;
+  font-family: "Inter";
+  font-size: 15px;
+  background-color: transparent;
+}
+
+.ul .li {
+  margin-left: 15px;
+  margin-right: 15px;
+  color: white;
+  display: flex;
+}
+
+.button {
+  background-color: white;
+  border: none;
+  margin-right: 15px;
+  font-family: "Inter";
+  border-radius: 3px;
+  font-size: 15px;
+  width: 60px;
+  height: 25px;
+  margin-top: auto;
+  float: none;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+.link1 {
+  text-decoration: none;
+  color: black;
+}
