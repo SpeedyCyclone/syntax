@@ -1,0 +1,82 @@
+.form {
+  max-width: 500px;
+  width: 95%;
+  margin: 0 auto;
+  display: block;
+}
+
+.inputgroup {
+  margin: 30px 0;
+}
+
+.inputgroup > * {
+  display: block;
+}
+
+.inputgroup label {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Druke Wide Bold";
+}
+
+.inputgroup input,
+.inputgroup select,
+.inputgroup textarea {
+  margin: 7px 0;
+  width: 100%;
+  padding: 15px 0;
+  text-indent: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.inputgroup input[type="text"]:focus,
+.inputgroup input[type="text"]:active,
+.inputgroup input[type="number"]:focus,
+.inputgroup input[type="number"]:active,
+.inputgroup select:focus,
+.inputgroup select:active {
+  border-color: #d14d72;
+}
+
+.inputgroup:last-child {
+  display: flex;
+  justify-content: center;
+}
+
+.button[type="submit"] {
+  padding: 15px 20px;
+  background: #2977f5;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: "Druke Wide Bold";
+  border-radius: 5px;
+}
+
+.button[type="submit"]:focus,
+.button[type="submit"]:active {
+  outline: none;
+}
+
+.add {
+  text-align: center;
+  font-size: 40px;
+  font-family: "Druke Wide Bold";
+  margin: 50px;
+  color: white;
+}
+
+.select {
+  font-family: "Druke Wide Bold";
+  font-size: 13px;
+  color: grey;
+}
