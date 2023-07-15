@@ -12,10 +12,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={styles.special1}>
-        <div className={styles.special}>
-          <h1 className={styles.heading}>Footwear Guardian.</h1>
-        </div>
+      <div className={styles.hero__cover}>
+        <h1 className={styles.heading}>Footwear Guardian.</h1>
         <center>
           <button className={styles.button}>
             <Link href="/reserve" className={styles.link}>

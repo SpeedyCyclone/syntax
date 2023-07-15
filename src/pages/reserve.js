@@ -1,7 +1,5 @@
+import style from "../styles/Reserve.module.css";
+
 export default function Reserve() {
-  return (
-    <>
-      <h1>Reserve</h1>
-    </>
-  );
+  return <div className={style.body}></div>;
 }
