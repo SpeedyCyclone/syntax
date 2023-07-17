@@ -17,6 +17,7 @@ model Locker {
   proximity String
   size String
   location String
+  used Boolean @default(false)
 }
 
 enum Status {
@@ -61,4 +62,8 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
+}
+
+model Reservation {
+  id            String    @id @default(auto()) @map("_id") @db.ObjectId
 }
