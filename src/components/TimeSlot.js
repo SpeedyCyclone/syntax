@@ -1,4 +1,4 @@
-export default function TimeSlot({ selected, time }) {
+export default function TimeSlot({ idx, select, selected, time }) {
   if (!selected)
     return (
       <div
@@ -9,7 +9,9 @@ export default function TimeSlot({ selected, time }) {
           fontSize: ".75rem",
           fontFamily: "'Press Start 2P'",
           width: "fit-content",
+          transition: "all 230ms ease-in",
         }}
+        onClick={() => select(idx)}
       >
         {time}
       </div>
@@ -25,7 +27,9 @@ export default function TimeSlot({ selected, time }) {
           fontSize: ".75rem",
           fontFamily: "'Press Start 2P'",
           width: "fit-content",
+          transition: "all 230ms ease-in",
         }}
+        onClick={() => select(idx)}
       >
         {time}
       </div>

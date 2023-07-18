@@ -1,5 +1,6 @@
 import TimeSlot from "@/components/TimeSlot";
 import style from "../styles/Reserve.module.css";
+import { useState } from "react";
 
 const Times = [
   {
@@ -21,6 +22,13 @@ const Times = [
 ];
 
 export default function Reserve() {
+  const [selected, changeSelected] = useState("6 to 7pm");
+
+  const selectTime = (i) => {
+    console.log(i);
+    changeSelected(Times[i].time);
+  };
+
   return (
     <div className={style.body}>
       <div className={style.hero}>
@@ -57,7 +65,13 @@ export default function Reserve() {
             <h2 className={style.subhead}>Time slot</h2>
             <div className={style.slots}>
               {Times.map((x, i) => (
-                <TimeSlot key={i} selected={x.selected} time={x.time} />
+                <TimeSlot
+                  key={i}
+                  idx={i}
+                  select={selectTime}
+                  selected={selected === x.time}
+                  time={x.time}
+                />
               ))}
             </div>
           </div>
