@@ -4,4 +4,79 @@
   width: 100vw;
   background-color: black;
   background-image: url("/reservation-page-wave.svg");
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  font-family: "Druke Wide Bold";
+  color: white;
+  font-size: 3rem;
+  vertical-align: middle;
+  margin: 2rem;
+}
+
+.selections {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem;
+}
+
+.select::before {
+  content: "";
+  background: url("/down-arrow.svg");
+  width: 16px;
+  height: 11px;
+  display: block;
+}
+
+.select {
+  background: none;
+  border: none;
+  margin-right: 15px;
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.819);
+}
+
+.subhead {
+  color: white;
+  font-size: 2rem;
+}
+
+.dateandtime {
+  margin: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  border-radius: 0.9375rem;
+  border: 4px solid rgba(255, 255, 255, 0.9);
+  max-width: 40vw;
+}
+
+.date {
+  display: flex;
+  flex-direction: row;
+}
+
+.date > input {
+  margin-left: 2rem;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.866);
+  content: none;
+  font-size: 1.5rem;
+}
+
+.time {
+  margin-top: 1rem;
+}
+
+.slots {
+  margin-top: 1rem;
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 1rem 2rem;
+  flex-wrap: wrap;
 }
