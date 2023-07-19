@@ -1,6 +1,7 @@
 .nav {
   position: absolute;
   right: 0;
+  /* background: inherit; */
 }
 
 .ul {

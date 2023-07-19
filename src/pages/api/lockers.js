@@ -21,6 +21,13 @@ export default async function handler(req, res) {
       res.status(500).json({ message: "Something went wrong" });
       console.log(e);
     }
+  } else if (req.method === "GET") {
+    try {
+      let data = await prisma.locker.findMany();
+      res.status(200).send(data);
+    } catch (err) {
+      res.status(500).json({ message: "something went wrong" });
+    }
   } else {
     res.setHeader("Allow", ["POST"]);
     res
