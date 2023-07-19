@@ -1,7 +1,7 @@
 import TimeSlot from "@/components/TimeSlot";
 import style from "../styles/Reserve.module.css";
 import { useState } from "react";
-import { useSession } from "next-auth/react";
+import book from "../components/book";
 
 const Times = [
   {
@@ -70,6 +70,8 @@ const NoLocker = ({ msg }) => {
 };
 
 const LockerAvailable = ({ locker }) => {
+  const [booked, setBooked] = useState(false);
+
   return (
     <div className={style.vacant}>
       <div
@@ -93,7 +95,16 @@ const LockerAvailable = ({ locker }) => {
         Location: {locker.location} <br />
         Proximity from entrance: {locker.proximity}
       </div>
-      <div className={style.book}>Book Now</div>
+      {booked ? (
+        <>
+          uquwuwuwu
+          <book />
+        </>
+      ) : (
+        <div className={style.book} onClick={() => setBooked(true)}>
+          Book Now
+        </div>
+      )}
     </div>
   );
 };
