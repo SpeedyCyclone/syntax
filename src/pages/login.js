@@ -8,35 +8,15 @@ export default function Login() {
         <div className={styles.box}>
           <div>
             <h1 className={styles.sign}>Sign Up</h1>
-            <form className={styles.form}>
-              <input
-                type="text"
-                placeholder="name"
-                className={styles.input}
-                required
-              ></input>
-              <input
-                type="text"
-                placeholder="email"
-                className={styles.input}
-                required
-              ></input>
-              <input
-                type="password"
-                placeholder="password"
-                className={styles.input}
-                required
-              ></input>
-              <center>
-                <button type="submit" className={styles.submit}>
-                  Submit
-                </button>
-              </center>
-            </form>
             <center>
               <button type="submit" className={styles.login}>
                 <Link className={styles.link} href="/api/auth/signin">
                   Sign In With Google
+                </Link>
+              </button>
+              <button type="submit" className={styles.login1}>
+                <Link className={styles.link1} href="/api/auth/signin">
+                  Sign In With Github
                 </Link>
               </button>
             </center>
