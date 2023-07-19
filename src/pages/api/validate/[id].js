@@ -18,8 +18,11 @@ export default async function handler(req, res) {
   }
 
   try {
-    console.log(key);
-    const validation = await prisma.Reservation.findMany();
+    const validation = await prisma.Reservation.findMany({
+      where: {
+        _id: { in: { key } },
+      },
+    });
     console.log(validation);
   } catch (err) {
     res.status(500).json({ errorb: err });
