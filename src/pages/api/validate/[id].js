@@ -12,14 +12,18 @@ export default async function handler(req, res) {
         id: id,
       },
     });
-    /*const validation = await prisma.Reservation.findUnique({
-      where: {
-        id: key,
-      },
-    }); */
-
-    res.status(200).json({ Locker });
+    console.log(Locker);
   } catch (err) {
-    res.status(500).json({ error: "failed to load data" });
+    res.status(500).json({ errora: err });
   }
+
+  try {
+    console.log(key);
+    const validation = await prisma.Reservation.findMany();
+    console.log(validation);
+  } catch (err) {
+    res.status(500).json({ errorb: err });
+  }
+
+  // res.status(200).json({ Locker });
 }

@@ -1,6 +1,8 @@
 import TimeSlot from "@/components/TimeSlot";
 import style from "../styles/Reserve.module.css";
 import { useState } from "react";
+import { useSession } from "next-auth/react";
+import { redirect } from "next/navigation";
 
 const Times = [
   {
@@ -23,6 +25,7 @@ const Times = [
 
 export default function Reserve() {
   const [selected, changeSelected] = useState("6 to 7pm");
+  const { data: session } = useSession();
 
   const selectTime = (i) => {
     console.log(i);
