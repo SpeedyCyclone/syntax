@@ -1,0 +1,28 @@
+.body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  background-image: url("/reservation-page-wave.svg");
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-family: "Poppins";
+  font-size: 1.25rem;
+}
+
+.heading {
+  font-family: "Druke Wide Bold";
+  color: white;
+  font-size: 3rem;
+  vertical-align: middle;
+  margin: 2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem;
+  justify-content: space-between;
+  max-width: 80vw;
+}

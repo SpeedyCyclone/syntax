@@ -25,11 +25,6 @@ export default function Navbar() {
             </Link>
           </li>
           <li className={styles.li}>
-            <Link href="/contact" className={styles.link}>
-              contact
-            </Link>
-          </li>
-          <li className={styles.li}>
             {status === "authenticated" ? (
               <button className={styles.button}>
                 <Link href="/profile" className={styles.link1}>

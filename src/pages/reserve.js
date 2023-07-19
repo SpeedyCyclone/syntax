@@ -1,7 +1,7 @@
 import TimeSlot from "@/components/TimeSlot";
 import style from "../styles/Reserve.module.css";
 import { useState } from "react";
-import book from "../components/book";
+import { QRCodeSVG } from "qrcode.react";
 
 const Times = [
   {
@@ -19,49 +19,6 @@ const Times = [
   {
     time: "8 to 9pm",
     selected: false,
-  },
-];
-
-const res = [
-  {
-    id: "64b2447c3c64dc0be05eaed4",
-    current_status: "Reserved",
-    reserved_till: "test",
-    proximity: "test",
-    size: "test",
-    location: "test",
-  },
-  {
-    id: "64b279e3292422d713bf2c6d",
-    current_status: "Vacant",
-    reserved_till: "",
-    proximity: "120",
-    size: "Small",
-    location: "B-Block",
-  },
-  {
-    id: "64b279e66a1ad24ab4741619",
-    current_status: "Vacant",
-    reserved_till: "",
-    proximity: "120",
-    size: "large",
-    location: "B-Block",
-  },
-  {
-    id: "64b3915ba6279dafac0458de",
-    current_status: "Vacant",
-    reserved_till: "uh",
-    proximity: "uh",
-    size: "uh",
-    location: "uh",
-  },
-  {
-    id: "64b39185e3f93a7211344e78",
-    current_status: "Vacant",
-    reserved_till: "uh",
-    proximity: "uh",
-    size: "uh",
-    location: "uh",
   },
 ];
 
@@ -96,10 +53,19 @@ const LockerAvailable = ({ locker }) => {
         Proximity from entrance: {locker.proximity}
       </div>
       {booked ? (
-        <>
-          uquwuwuwu
-          <book />
-        </>
+        <div
+          style={{
+            marginTop: "2rem",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <QRCodeSVG
+            value={`https://syntax-taupe.vercel.app/validate/${locker.id}?key=`}
+          />
+          <p style={{ marginTop: "1rem" }}>Scan the QR Code at the locker.</p>
+        </div>
       ) : (
         <div className={style.book} onClick={() => setBooked(true)}>
           Book Now
@@ -118,6 +84,9 @@ export default function Reserve({ data }) {
     date: undefined,
     time: undefined,
   });
+
+  const res = data;
+  console.log(res);
 
   const [filtered, setFiltered] = useState(
     res.filter((x) => {
@@ -270,3 +239,15 @@ export default function Reserve({ data }) {
     </div>
   );
 }
+
+export const getServerSideProps = async () => {
+  let data = await fetch("https://syntax-taupe.vercel.app/api/lockers", {
+    method: "GET",
+  }).then((res) => res.json());
+
+  return {
+    props: {
+      data,
+    },
+  };
+};
