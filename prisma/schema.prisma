@@ -68,3 +68,8 @@ model VerificationToken {
 
   @@unique([identifier, token])
 }
+
+model Reservation {
+  id  String @id @map("_id") @db.ObjectId
+  locker_id String
+}
