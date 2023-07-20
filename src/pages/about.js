@@ -16,17 +16,17 @@ export default function About() {
           inconvenience and inefficiency in managing the storage and retrieval
           process. To address this long-standing concern, we at Footwear
           Guardian recognized the need for a modern and user-friendly solution
-          that ensures the safekeeping and easy retrieval of visitors' cherished
+          that ensures the safekeeping and easy retrieval of visitors cherished
           footwear.
         </div>
 
         <div style={{ marginTop: "2rem" }}>
           Footwear Guardian is a pioneering web app and interface, developed in
           collaboration with DPSI Syntax, specifically designed to offer a
-          seamless and secure experience for storing and retrieving visitors'
+          seamless and secure experience for storing and retrieving visitors
           footwear during their visit to Delhi Bangla Sahib Gurudwara. Our
           innovative solution aims to revolutionize the way visitors interact
-          with the Gurudwara's locker facilities, making it an integral part of
+          with the Gurudwaras locker facilities, making it an integral part of
           their spiritual journey.
         </div>
       </div>
